@@ -14,8 +14,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/api', router);
 passesRoute(router);
 usersRoute(router);
-router.get('/', (req, res) => {
-    res.send('MiniCore Parking Passes');
+app.get('/', (req, res) => {
+    res.sendStatus(200);
 });
 DB();
 app.listen(properties.PORT, () => {
